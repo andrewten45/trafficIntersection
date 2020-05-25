@@ -1,4 +1,4 @@
 # playground
 
 ## Description
-This repository includes my experimental software.
+This repository includes the traffic intersection simulator.
