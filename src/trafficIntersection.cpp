@@ -1,17 +1,16 @@
 #include <iostream>
 #include <chrono>
 #include "trafficIntersection.h"
-using namespace std;
 
 void trafficIntersection::AutoContinue() {
-    string userIn;
+    std::string userIn;
 
-    cout << "Enter 0 to break from the loop.\n";
+    std::cout << "Enter 0 to break from the loop.\n";
 
-    while(userIn != "0") {
+    while (userIn != "0") {
         //GenerateLightColor();
         GetLightColor();
-        cin >> userIn;
+        std::cin >> userIn;
     }
 }
 
@@ -30,7 +29,7 @@ void trafficIntersection::CycleLightColors(int userNum1, int userNum2) {
 }
 
 void trafficIntersection::DetectionLightColors() {
-    if(isVehicleDetected == true && lightState == 2) {
+    if (isVehicleDetected == true && lightState == 2) {
         lightState = 0;
         GetLightColor();
     }
@@ -41,15 +40,15 @@ void trafficIntersection::DetectionLightColors() {
 }
 
 void trafficIntersection::GetLightColor() {
-    switch(lightState) {
+    switch (lightState) {
     case 0:
-        cout << "Green\n";
+        std::cout << "Green\n";
         break;
     case 1:
-        cout << "Yellow\n";
+        std::cout << "Yellow\n";
         break;
     case 2:
-        cout << "Red\n";
+        std::cout << "Red\n";
         break;
     }
 }
@@ -63,6 +62,6 @@ void trafficIntersection::SetDetectFalse() {
 }
 
 void trafficIntersection::SetLightColor() {
-    cout << "Enter light color, which can be either 0, 1, or 2.\n";
-    cin >> lightState;
+    std::cout << "Enter light color, which can be either 0, 1, or 2.\n";
+    std::cin >> lightState;
 }
