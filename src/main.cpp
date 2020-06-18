@@ -1,4 +1,5 @@
 //Traffic intersection by Andrew T, which simulates a traffic light.
+//This app represents a hypothetical traffic light; more research is needed on actual light behavior to more fully simulate scenarios.
 #include <iostream>
 #include <chrono>
 #include "trafficIntersection.h"
