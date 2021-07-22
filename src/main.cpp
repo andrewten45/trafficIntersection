@@ -1,6 +1,5 @@
 //Traffic intersection by Andrew T, which simulates a traffic light.
 //This app represents a hypothetical traffic light; more research is needed on actual light behavior to more fully simulate scenarios.
-//TODO: Improve readability; add alteration of light timing
 #include <iostream>
 #include <chrono>
 #include "trafficIntersection.h"
@@ -41,9 +40,9 @@ int main()
 
         std::cout << "Enter the number of cycles:\n";
         std::cin >> numCycles;
-        std::cout << "Enter length of red/green lights:\n";
+        std::cout << "Enter duration of red/green lights:\n";
         std::cin >> userNum1;
-        std::cout << "Enter length of yellow light:\n";
+        std::cout << "Enter duration of yellow light:\n";
         std::cin >> userNum2;
 
         for (int i = 0; i < numCycles; ++i) {
