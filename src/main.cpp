@@ -40,7 +40,7 @@ int main()
 
         std::cout << "Enter the number of cycles:\n";
         std::cin >> numCycles;
-        std::cout << "Enter duration of red/green lights:\n";
+        std::cout << "Enter duration in seconds of red/green lights:\n";
         std::cin >> userNum1;
         std::cout << "Enter duration of yellow light:\n";
         std::cin >> userNum2;
