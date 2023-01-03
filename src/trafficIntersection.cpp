@@ -1,5 +1,6 @@
 #include <iostream>
 #include <chrono>
+#include <windows.h>
 #include "trafficIntersection.h"
 
 void trafficIntersection::AutoContinue() {
@@ -40,18 +41,35 @@ void trafficIntersection::DetectionLightColors() {
 }
 
 void trafficIntersection::GetLightColor() {
+    //Test with Console Colors from windows.h
+    //Note that output is formatted this way in the original source, an article by Tenry (Link: https://dev.to/tenry/terminal-colors-in-c-c-3dgc)
+    //Despite my use of different formatting, the program still functions correctly. More testing may be needed, however.
+    /*
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole,
+        FOREGROUND_RED);
+    printf("red text\n");
+    */
+
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+
     switch (lightState) {
     case 0:
+        SetConsoleTextAttribute(hConsole, FOREGROUND_GREEN);
         std::cout << "Green\n";
         break;
     case 1:
+        SetConsoleTextAttribute(hConsole, FOREGROUND_RED | FOREGROUND_GREEN);
         std::cout << "Yellow\n";
         break;
     case 2:
+        SetConsoleTextAttribute(hConsole, FOREGROUND_RED);
         std::cout << "Red\n";
         break;
     }
 }
+
+//TODO: Function that calls to SetDetectTrue/False based on placeholder. Currently seemingly operates as if there are no cars.
 
 void trafficIntersection::SetDetectTrue() {
     isVehicleDetected = true;
