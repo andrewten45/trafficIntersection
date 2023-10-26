@@ -3,6 +3,7 @@
 #include <iostream>
 #include <chrono>
 #include "trafficIntersection.h"
+//TODO: Refactor lines starting with std::cout to make it easier to maintain
 
 void menuOutput(int menuNum) {
     switch (menuNum) {
