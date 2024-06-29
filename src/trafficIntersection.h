@@ -1,7 +1,8 @@
 #ifndef TRAFFICINTERSECTION_H_INCLUDED
 #define TRAFFICINTERSECTION_H_INCLUDED
 
-class trafficIntersection {
+class trafficIntersection
+{
 public:
     void SetLightColor();
     void GetLightColor();
@@ -10,6 +11,7 @@ public:
     void DetectionLightColors();
     void SetDetectTrue();
     void SetDetectFalse();
+
 private:
     int lightState;
     bool isVehicleDetected;
